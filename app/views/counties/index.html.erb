@@ -1,0 +1,7 @@
+<h1>State Counties</h1>
+
+<div id="counties_list">
+	<% @counties.each do |county| %>
+	  <%= link_to county.name, county %><br/>
+	<% end %>
+</div>

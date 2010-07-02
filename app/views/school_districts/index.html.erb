@@ -1,0 +1,7 @@
+<h1>School Districts</h1>
+
+<div id="districts_list">
+	<% @school_districts.each do |district| %>
+	  <%= link_to district.name, district %><br/>
+	<% end %>
+</div>

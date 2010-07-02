@@ -1,0 +1,39 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+	  site_init();
+	});
+	
+	var map;
+	function site_init() {
+		$(function() {
+			$("#tabs").tabs();
+		});
+		
+	    var latlng = new google.maps.LatLng(<%= @school.latitude %>, <%= @school.longitude %>);
+	    var myOptions = {
+	      zoom: 14,
+	      center: latlng,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    map = new google.maps.Map(document.getElementById("school_map"), myOptions);
+		plot_school(<%= @school.latitude %>, <%= @school.longitude %>, "<%= @school.name %>")
+	}
+
+</script>
+
+<div id="tabs">
+	<ul>
+		<li><a href="#basic_info_tab">Basic Info</a></li>
+		<li><a href="#enrollment_tab">Enrollment</a></li>
+		<li><a href="#rankings_tab">Rankings</a></li>
+	</ul>
+	<div id="basic_info_tab">
+		<%= render :partial => 'basic_info' %>
+	</div>
+	<div id="enrollment_tab">
+		<%= render :partial => 'enrollment_info' %>
+	</div>
+	<div id="rankings_tab">
+		<%= render :partial => 'rankings_info' %>
+	</div>
+</div>

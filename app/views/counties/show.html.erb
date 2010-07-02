@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+	<% center = find_center_point(@county.schools) %>
+	var centLat = <%= center[0] %>;
+	var centLng = <%= center[1] %>;
+	
+	$(document).ready(function() {
+	  site_init();
+	});
+	
+	var map;
+	function site_init() {
+	    var latlng = new google.maps.LatLng(centLat, centLng);
+	    var myOptions = {
+	      zoom: 10,
+	      center: latlng,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    map = new google.maps.Map(document.getElementById("county_map"), myOptions);
+	
+		// Plot Schools
+		<% @county.schools.each do |school| %>
+			plot_school(<%= school.latitude %>, <%= school.longitude %>, "<%= school.name %>")
+		<% end %>
+	}
+</script>
+
+
+<h1>Schools in <%= @county.name %> County</h1>
+<div id="county_info">
+	<table>
+		<% @county.schools.each do |school| %>
+			<tr>
+				<td><%= link_to school.name, school %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<div id="county_map">
+	Insert Map Here
+</div>

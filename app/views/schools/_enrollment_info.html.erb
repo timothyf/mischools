@@ -1,0 +1,62 @@
+Total Students: <%= @school.enrollment.total_students %><br/><br/>
+Total Male Students: <%= @school.enrollment.total_male_students %><br/>
+Total Female Students: <%= @school.enrollment.total_female_students %>
+<br/><br/>
+<h3>Students by Grade</h3>
+<% if @school.enrollment.prek_students %>
+	PreK: <%= @school.enrollment.prek_students %><br/>
+<% end %>
+<% if @school.enrollment.kindergarten_students %>
+	Kindergarten: <%= @school.enrollment.kindergarten_students %><br/>
+<% end %>
+<% if @school.enrollment.first_grade_students %>
+	1st Grade: <%= @school.enrollment.first_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.second_grade_students %>
+	2nd Grade: <%= @school.enrollment.second_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.third_grade_students %>
+	3rd Grade: <%= @school.enrollment.third_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.fourth_grade_students %>
+	4th Grade: <%= @school.enrollment.fourth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.fifth_grade_students %>
+	5th Grade: <%= @school.enrollment.fifth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.sixth_grade_students %>
+	6th Grade: <%= @school.enrollment.sixth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.seventh_grade_students %>
+	7th Grade: <%= @school.enrollment.seventh_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.eigth_grade_students %>
+	8th Grade: <%= @school.enrollment.eigth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.ninth_grade_students %>
+	9th Grade: <%= @school.enrollment.ninth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.tenth_grade_students %>
+	10th Grade: <%= @school.enrollment.tenth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.eleventh_grade_students %>
+	11th Grade: <%= @school.enrollment.eleventh_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.twelfth_grade_students %>
+	12th Grade: <%= @school.enrollment.twelfth_grade_students %><br/>
+<% end %>
+<% if @school.enrollment.ungraded_students %>
+	Ungraded: <%= @school.enrollment.ungraded_students %><br/>
+<% end %>
+<br/>
+<h3>Lunch Program Students</h3>
+Free Lunch Eligible: <%= @school.enrollment.free_lunch_eligible %><br/>
+Reduced Price Lunch Eligible: <%= @school.enrollment.reduced_price_lunch_eligible %><br/>
+Free and Reduced Lunch: <%= @school.enrollment.free_and_reduced_lunch %>
+<br/><br/>
+<h3>Students by Race</h3>
+American Indian Students: <%= @school.enrollment.american_indian_students %><br/>
+Asian Students: <%= @school.enrollment.asian_students %><br/>
+Black Students: <%= @school.enrollment.black_non_hispanic_students %><br/>
+Hispanic Students: <%= @school.enrollment.hispanic_students %><br/>
+White Students: <%= @school.enrollment.white_students %><br/>

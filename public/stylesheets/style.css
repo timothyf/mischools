@@ -1,0 +1,209 @@
+body {
+	background-color: #ccffff;
+	text-align: center;
+	font-family:Lucida Grande,Lucida Sans,Arial,sans-serif;
+}
+
+a, a:visited {
+	color: #727cc3;
+}
+
+label {
+	color: #60560f;
+	color: gray;
+}
+
+.val {
+	color: #60560f;
+	color: gray;
+}
+
+#wrapper {
+	background-color: white;
+	width: 1200px;
+	margin: auto;
+}
+
+#header {
+	padding: 10px;
+}
+
+h1 {
+	text-align: left;
+	color: #666633;
+	font-size: 18pt;
+}
+
+#search {
+	float: right;
+	margin-right: 50px;
+}
+
+#top_nav {
+	float:left;
+	clear: both;
+	margin-left: 18px;
+	margin-top: 10px;
+}
+
+#top_nav ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#top_nav ul li {
+	float: left;
+	margin-left: 20px;
+}
+
+#top_nav ul li a, #top_nav ul li a:visited {
+	color: #fd5621;
+}
+
+#logo #hdr_img {
+	float: left;
+	width: 300px;
+}
+
+#logo #hdr_img img {
+	border: none;
+}
+
+#logo #hdr_txt {
+	float: left;
+	width: 600px;
+	margin-top: 50px;
+	font-family: 'Lobster', arial, serif;
+	font-size: 56px;
+	color: #cc3333;
+}
+
+#content {
+	float: left;
+	clear: both;
+	padding: 20px;
+}
+
+#footer {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#school_info, #district_info, #county_info {
+	float: left;
+	width: 500px;
+}
+
+#school_info {
+	width: 750px;
+	margin-left: -50px;
+}
+
+#district_info, #county_info {
+	text-align: left;
+}
+
+#school_map, #district_map, #county_map {
+	float: left;
+	width: 400px;
+	height: 400px;
+	border: 2px solid #8ae109;
+}
+
+#district_map, #county_map {
+	width: 500px;
+	height: 500px;
+}
+
+#school_name {
+	font-weight: bold;
+	margin-top: 10px;
+	color: #cc3333;
+}
+
+#school_district a, #school_district a:visited {
+	color: gray;
+}
+
+#school_info label {
+	float: left;
+	clear: both;
+	width: 100px;
+	text-align: left;
+	margin-left: 250px;
+}
+
+#school_info .val {
+	float: left;
+	margin-left: 10px;
+}
+
+#counties_list, #schools_list, #districts_list {
+	text-align: left;
+}
+
+.school_address {
+	color: gray;
+}
+
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+	font-size: 9pt;
+}
+
+.ui-widget-content a, .ui-widget-content a:visited {
+	color: #727cc3;	
+}
+
+.ui-widget {
+	font-size: 1em;
+}
+
+.ui-tabs .ui-tabs-panel {
+	padding: 0.7em;
+}
+
+.ui-tabs {
+	width: 1150px;
+}
+
+#enrollment_tab {
+	text-align: left;
+}
+
+input.ui-button {
+	padding: 0px;
+	width: 70px;
+}
+
+.search_field {
+	width: 200px;
+}
+
+#enrollment_tab {
+	color: gray;
+}
+
+#home_content {
+	color: gray;
+	margin-top: 40px;
+	width: 100%;
+	text-align:left;
+}
+
+#home_content ul {
+	
+}
+
+#home_content ul li {
+	line-height: 2.5em;
+}
+
+
+#footer #copyright {
+	font-size: 10pt;
+	color: gray;
+	padding: 10px;
+	width: 100%;
+}

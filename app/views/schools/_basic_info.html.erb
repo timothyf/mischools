@@ -1,0 +1,25 @@
+<div id="school_info">
+	<div id="school_name">
+		<%= @school.name %>
+	</div>
+	<div id="school_district">
+		<%= link_to @school.school_district.name, @school.school_district %>
+	</div>
+	<br/>
+	<span class="school_address">
+		<%= @school.location_address %><br/>
+		<%= @school.location_city %>, <%= @school.location_state_abbr %>  <%= @school.location_zip %><br/>
+		<%= @school.phone%>
+	</span>
+	<br/><br/>
+	<label>County:</label>
+	<span class="val"><%= link_to @school.county.name, @school.county %></span><br/>
+	<label>School Type:</label>
+	<span class="val"><%= @school.school_type %></span><br/>
+	<label>Grades:</label>
+	<span class="val"><%= @school.low_grade %> - <%= @school.high_grade %></span>
+</div>
+<div id="school_map">
+	Insert Map Here
+</div>
+<div style="clear:both;"></div>

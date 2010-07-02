@@ -1,0 +1,43 @@
+<script type="text/javascript">
+
+	<% center = find_center_point(@school_district.schools) %>
+	var centLat = <%= center[0] %>;
+	var centLng = <%= center[1] %>;
+	
+	$(document).ready(function() {
+	  site_init();
+	});
+	
+	var map;
+	function site_init() {
+	    var latlng = new google.maps.LatLng(centLat, centLng);
+	    var myOptions = {
+	      zoom: 12,
+	      center: latlng,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    map = new google.maps.Map(document.getElementById("district_map"), myOptions);
+	
+		// Plot Schools
+		<% @school_district.schools.each do |school| %>
+			plot_school(<%= school.latitude %>, <%= school.longitude %>, "<%= school.name %>")
+		<% end %>
+	}
+</script>
+
+
+<h1>Schools in <%= @school_district.name %></h1>
+<div id="district_info">
+	<table>
+		<% @school_district.schools.each do |school| %>
+			<tr>
+				<td><%= link_to school.name, school %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<div id="district_map">
+	Insert Map Here
+</div>
+

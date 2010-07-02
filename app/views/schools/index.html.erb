@@ -1,0 +1,7 @@
+<h1>Public Schools</h1>
+
+<div id="schools_list">
+	<% @schools.each do |school| %>
+	  <%= link_to school.name, school %><br/>
+	<% end %>
+</div>

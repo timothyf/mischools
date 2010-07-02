@@ -1,0 +1,12 @@
+<h1>Editing school_district</h1>
+
+<% form_for(@school_district) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @school_district %> |
+<%= link_to 'Back', school_districts_path %>
