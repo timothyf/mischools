@@ -1,6 +1,9 @@
 class SchoolsController < ApplicationController
 
 
+  caches_page :index
+  
+
   def index
     @schools = School.all(:order => 'name ASC')
     respond_to do |format|

@@ -3,50 +3,51 @@ Total Male Students: <%= @school.enrollment.total_male_students %><br/>
 Total Female Students: <%= @school.enrollment.total_female_students %>
 <br/><br/>
 <h3>Students by Grade</h3>
+<span class="help_text">Click grade for additional detail</span>
 <% if @school.enrollment.prek_students %>
-	PreK: <%= @school.enrollment.prek_students %><br/>
+	<%= link_to 'PreK', "javascript:show_grade_detail(#{@school.enrollment.id}, 'PreK')" %>: <%= @school.enrollment.prek_students %><br/>
 <% end %>
 <% if @school.enrollment.kindergarten_students %>
-	Kindergarten: <%= @school.enrollment.kindergarten_students %><br/>
+	<%= link_to 'Kindergarten', "javascript:show_grade_detail(#{@school.enrollment.id}, 'Kindergarten')" %>: <%= @school.enrollment.kindergarten_students %><br/>
 <% end %>
 <% if @school.enrollment.first_grade_students %>
-	1st Grade: <%= @school.enrollment.first_grade_students %><br/>
+	<%= link_to '1st Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'first_grade')" %>: <%= @school.enrollment.first_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.second_grade_students %>
-	2nd Grade: <%= @school.enrollment.second_grade_students %><br/>
+	<%= link_to '2nd Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'second_grade')" %>: <%= @school.enrollment.second_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.third_grade_students %>
-	3rd Grade: <%= @school.enrollment.third_grade_students %><br/>
+	<%= link_to '3rd Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'third_grade')" %>: <%= @school.enrollment.third_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.fourth_grade_students %>
-	4th Grade: <%= @school.enrollment.fourth_grade_students %><br/>
+	<%= link_to '4th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'fourth_grade')" %>: <%= @school.enrollment.fourth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.fifth_grade_students %>
-	5th Grade: <%= @school.enrollment.fifth_grade_students %><br/>
+	<%= link_to '5th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'fifth_grade')" %>: <%= @school.enrollment.fifth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.sixth_grade_students %>
-	6th Grade: <%= @school.enrollment.sixth_grade_students %><br/>
+	<%= link_to '6th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'sixth_grade')" %>: <%= @school.enrollment.sixth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.seventh_grade_students %>
-	7th Grade: <%= @school.enrollment.seventh_grade_students %><br/>
+	<%= link_to '7th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'seventh_grade')" %>: <%= @school.enrollment.seventh_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.eigth_grade_students %>
-	8th Grade: <%= @school.enrollment.eigth_grade_students %><br/>
+	<%= link_to '8th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'eigth_grade')" %>: <%= @school.enrollment.eigth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.ninth_grade_students %>
-	9th Grade: <%= @school.enrollment.ninth_grade_students %><br/>
+	<%= link_to '9th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'ninth_grade')" %>: <%= @school.enrollment.ninth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.tenth_grade_students %>
-	10th Grade: <%= @school.enrollment.tenth_grade_students %><br/>
+	<%= link_to '10th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'tenth_grade')" %>: <%= @school.enrollment.tenth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.eleventh_grade_students %>
-	11th Grade: <%= @school.enrollment.eleventh_grade_students %><br/>
+	<%= link_to '11th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'eleventh_grade')" %>: <%= @school.enrollment.eleventh_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.twelfth_grade_students %>
-	12th Grade: <%= @school.enrollment.twelfth_grade_students %><br/>
+	<%= link_to '12th Grade', "javascript:show_grade_detail(#{@school.enrollment.id}, 'twelfth_grade')" %>: <%= @school.enrollment.twelfth_grade_students %><br/>
 <% end %>
 <% if @school.enrollment.ungraded_students %>
-	Ungraded: <%= @school.enrollment.ungraded_students %><br/>
+	<%= link_to 'Ungraded', "javascript:show_grade_detail(#{@school.enrollment.id}, 'ungraded')" %>: <%= @school.enrollment.ungraded_students %><br/>
 <% end %>
 <br/>
 <h3>Lunch Program Students</h3>
@@ -60,3 +61,5 @@ Asian Students: <%= @school.enrollment.asian_students %><br/>
 Black Students: <%= @school.enrollment.black_non_hispanic_students %><br/>
 Hispanic Students: <%= @school.enrollment.hispanic_students %><br/>
 White Students: <%= @school.enrollment.white_students %><br/>
+
+<div id="enrollment_detail" title="Enrollment Detail" style="display:none;"></div>

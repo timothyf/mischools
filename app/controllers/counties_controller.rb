@@ -1,5 +1,9 @@
 class CountiesController < ApplicationController
 
+
+  caches_page :index
+  
+  
   def index
     @counties = County.all(:order => 'name ASC')
     respond_to do |format|

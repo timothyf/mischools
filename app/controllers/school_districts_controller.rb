@@ -1,6 +1,9 @@
 class SchoolDistrictsController < ApplicationController
 
 
+  caches_page :index
+  
+  
   def index
     @school_districts = SchoolDistrict.all
     respond_to do |format|

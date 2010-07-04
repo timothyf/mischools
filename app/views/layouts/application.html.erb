@@ -10,14 +10,14 @@
 	<%= stylesheet_link_tag '../javascripts/jquery-ui-1.8.2/css/redmond/jquery-ui-1.8.2.custom.css' %>
 	<%= stylesheet_link_tag 'style' %>
 	
-	<%= javascript_include_tag 'jquery-1.4.2.min' %>
+	<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
 	<%= javascript_include_tag 'jquery-ui-1.8.2/js/jquery-ui-1.8.2.custom.min.js' %>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<%= javascript_include_tag 'application' %>
 	<script type="text/javascript">
-	$(function() {
-		$("input:submit").button();
-	});
+		$(function() {
+			$("input:submit").button();
+		});
 	</script>
 </head>
 
@@ -47,11 +47,24 @@
 		</div>
 		<div id="footer">
 			<div id="copyright">
-				Copyright 2010 Timothy Fisher
+				Copyright 2010 <%= link_to 'Timothy Fisher', 'http://www.timothyfisher.com' %>
 			</div>
 		</div>
 		<div style="clear:both;"></div>
 	</div>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-3428872-22']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </body>
 
 </html>
